@@ -94,11 +94,18 @@ const PantryList = () => {
   };
 
   const handleUpdate = async () => {
-    const { id, name, quantity, expiry } = editItem;
-    await updateDoc(doc(db, "pantryItems", id), { name, quantity, expiry });
-    setOpenEdit(false);
-    fetchItems();
-  };
+  const { id, name, quantity, expiry } = editItem;
+
+  // 🔐 Basic Validation
+  if (!name.trim() || !quantity.trim() || !expiry.trim()) {
+    alert("All fields must be filled out.");
+    return;
+  }
+
+  await updateDoc(doc(db, "pantryItems", id), { name, quantity, expiry });
+  setOpenEdit(false);
+  fetchItems();
+};
 
   return (
     <div style={{ display: "flex", justifyContent: "center", marginTop: "2rem" }}>
