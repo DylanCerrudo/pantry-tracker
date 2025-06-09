@@ -96,7 +96,7 @@ const PantryList = () => {
   const handleUpdate = async () => {
   const { id, name, quantity, expiry } = editItem;
 
-  // 🔐 Basic Validation
+  //Basic Validation
   if (!name.trim() || !quantity.trim() || !expiry.trim()) {
     alert("All fields must be filled out.");
     return;
@@ -110,15 +110,17 @@ const PantryList = () => {
   return (
     <div style={{ display: "flex", justifyContent: "center", marginTop: "2rem" }}>
       <div
-        style={{
-          backgroundColor: "#ffffff",
-          borderRadius: "16px",
-          padding: "2rem",
-          width: "100%",
-          maxWidth: "800px",
-          boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-        }}
-      >
+  style={{
+    backgroundColor: "#fdf3e7", 
+    borderRadius: "16px",
+    padding: "2rem",
+    width: "100%",
+    maxWidth: "800px",
+    boxShadow: "0 4px 20px rgba(0,0,0,0.15)",
+    backdropFilter: "none",
+    WebkitBackdropFilter: "none",
+  }}
+>
         <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
         <Image src="/PantryEmojiPIC.png" alt="Pantry" width={32} height={32} />
           <h2 style={{ color: "#000000" }}>Pantry Items</h2>
@@ -176,7 +178,7 @@ const PantryList = () => {
         </ul>
       </div>
 
-      {/* ❗ Confirm Delete Dialog */}
+      {/* Confirm Delete Dialog */}
       <Dialog open={openConfirm} onClose={() => setOpenConfirm(false)}>
         <DialogTitle>Delete Item</DialogTitle>
         <DialogContent style={{ textAlign: "center" }}>
@@ -195,7 +197,7 @@ const PantryList = () => {
         </DialogActions>
       </Dialog>
 
-      {/* ✏️ Edit Item Dialog */}
+      {/* Edit Item Dialog */}
       <Dialog open={openEdit} onClose={() => setOpenEdit(false)}>
         <DialogTitle>Edit Item</DialogTitle>
         <DialogContent style={{ display: "flex", flexDirection: "column", gap: "1rem", marginTop: "0.5rem" }}>

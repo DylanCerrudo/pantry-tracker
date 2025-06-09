@@ -1,14 +1,30 @@
 :root {
-  --background: #d7f178;
+  --background: rgba(255, 255, 255, 0.8); 
   --foreground: #171717;
-  --background-image: url('https://img.freepik.com/free-vector/hand-drawn-pantry-illustration_23-2148760097.jpg?semt=ais_hybrid&w=740'); /* light mode image */
+  --background-image: url('https://img.freepik.com/free-vector/hand-drawn-pantry-illustration_23-2148760097.jpg?semt=ais_hybrid&w=740');
+}
+
+input,
+textarea,
+.MuiOutlinedInput-root {
+  background-color: #f9f9f9 !important;
+  color: #000000 !important;
+  border: 1px solid #f9f9f9;
+  border-radius: 4px;
+}
+
+label.MuiInputLabel-root {
+  background-color: #f9f9f9;
+  padding: 0 4px;
+  z-index: 1;
+  border-radius: 4px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #121212;
     --foreground: #f5f5f5;
-    --background-image: url('https://img.freepik.com/free-vector/hand-drawn-pantry-illustration_23-2148760097.jpg?semt=ais_hybrid&w=740'); /* dark mode can be same or different */
+    --background-image: url('https://img.freepik.com/free-vector/hand-drawn-pantry-illustration_23-2148760097.jpg?semt=ais_hybrid&w=740'); /* dark mode */
   }
 
   html {
@@ -44,7 +60,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
+  backdrop-filter: blur(2px);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+

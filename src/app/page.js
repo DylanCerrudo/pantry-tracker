@@ -7,7 +7,7 @@ export default function Home() {
   const [refreshList, setRefreshList] = React.useState(false);
 
   const handleItemAdded = () => {
-    setRefreshList((prev) => !prev); // trigger re-fetch
+    setRefreshList((prev) => !prev);
   };
 
   return (

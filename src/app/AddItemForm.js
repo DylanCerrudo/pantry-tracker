@@ -36,7 +36,7 @@ export default function AddItemForm({ onItemAdded }) {
     setQuantity("");
     setExpiry("");
 
-    if (onItemAdded) onItemAdded(); // ✅ Refresh items without reload
+    if (onItemAdded) onItemAdded(); //Refresh items without reload
   };
 
   return (
