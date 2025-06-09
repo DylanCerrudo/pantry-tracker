@@ -23,7 +23,7 @@ export default function Home() {
           boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
         }}
       >
-                <h1 style={{ margin: 1 }}>Welcome to Dylan&apos;s Pantry Tracker!</h1>
+                <h1 style={{ margin: 1 }}>Welcome to Dylans Pantry Tracker!</h1>
 
       </div>
 
