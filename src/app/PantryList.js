@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import {
   collection,
   getDocs,
@@ -112,7 +113,7 @@ const PantryList = () => {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-          <img src="/PantryEmojiPIC.png" alt="Pantry" style={{ width: "32px" }} />
+        <Image src="/PantryEmojiPIC.png" alt="Pantry" width={32} height={32} />
           <h2 style={{ color: "#000000" }}>Pantry Items</h2>
         </div>
 
@@ -172,7 +173,13 @@ const PantryList = () => {
       <Dialog open={openConfirm} onClose={() => setOpenConfirm(false)}>
         <DialogTitle>Delete Item</DialogTitle>
         <DialogContent style={{ textAlign: "center" }}>
-          <img src="/BreadShockedPIC.jpeg" alt="Shocked Bread" style={{ width: "80px", marginBottom: "1rem" }} />
+       <Image
+  src="/BreadShockedPIC.jpeg"
+  alt="Shocked Bread"
+  width={80}
+  height={80}
+  style={{ marginBottom: "1rem" }}
+/>
           <div>Are you sure you want to delete this item? This cannot be undone.</div>
         </DialogContent>
         <DialogActions>
