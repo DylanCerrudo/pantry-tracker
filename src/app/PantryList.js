@@ -124,7 +124,7 @@ const PantryList = () => {
   }}
 >
         <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-        <Image src="/PantryEmojiPIC.png" alt="Pantry" width={32} height={32} />
+        <Image src="/PantryEmojiPIC copy.png" alt="Pantry" width={32} height={32} />
           <h2 style={{ color: "#000000" }}>Pantry Items</h2>
         </div>
 
