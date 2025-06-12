@@ -40,34 +40,55 @@ export default function AddItemForm({ onItemAdded }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <TextField
-        label="Item Name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        fullWidth
-        margin="normal"
-      />
-      <TextField
-        label="Quantity"
-        type="number"
-        value={quantity}
-        onChange={(e) => setQuantity(e.target.value)}
-        fullWidth
-        margin="normal"
-      />
-      <TextField
-        label="Expiration Date"
-        type="text"
-        placeholder="MM/DD/YYYY"
-        value={expiry}
-        onChange={(e) => setExpiry(formatDateInput(e.target.value))}
-        fullWidth
-        margin="normal"
-      />
-      <Button type="submit" variant="contained" color="primary">
-        Add Item
-      </Button>
-    </form>
+    <form
+  onSubmit={handleSubmit}
+  style={{
+    display: "flex",
+    flexWrap: "wrap",
+    gap: "1rem",
+    alignItems: "flex-start",
+    maxWidth: "800px", 
+  }}
+>
+  <TextField
+    label="Item Name"
+    value={name}
+    onChange={(e) => setName(e.target.value)}
+    sx={{ width: "200px" }}
+    margin="normal"
+  />
+  <TextField
+    label="Quantity"
+    type="number"
+    value={quantity}
+    onChange={(e) => setQuantity(e.target.value)}
+    sx={{ width: "120px" }}
+    margin="normal"
+  />
+  <TextField
+    label="Expiration Date"
+    type="text"
+    placeholder="MM/DD/YYYY"
+    value={expiry}
+    onChange={(e) => setExpiry(formatDateInput(e.target.value))}
+    sx={{ width: "180px" }}
+    margin="normal"
+  />
+  <Button
+    type="submit"
+    variant="contained"
+    sx={{
+      backgroundColor: "#6b4f3b",
+      color: "#ffffff",
+      height: "56px",
+      marginTop: "16px", 
+      "&:hover": {
+        backgroundColor: "#5a4031",
+      },
+    }}
+  >
+    Add Item
+  </Button>
+</form>
   );
 }

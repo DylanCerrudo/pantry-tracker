@@ -108,14 +108,16 @@ const PantryList = () => {
 };
 
   return (
-    <div style={{ display: "flex", justifyContent: "center", marginTop: "2rem" }}>
+    <div style={{ marginLeft: "1px", marginTop: "2rem" }}>
+
+
       <div
   style={{
-    backgroundColor: "#fdf3e7", 
+    backgroundColor: "#e7c9a9", 
     borderRadius: "16px",
     padding: "2rem",
     width: "100%",
-    maxWidth: "800px",
+    maxWidth: "550px",
     boxShadow: "0 4px 20px rgba(0,0,0,0.15)",
     backdropFilter: "none",
     WebkitBackdropFilter: "none",
@@ -132,7 +134,7 @@ const PantryList = () => {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             fullWidth
-            sx={{ maxWidth: 250 }}
+            sx={{ maxWidth: 220 }}
           />
 
           <TextField

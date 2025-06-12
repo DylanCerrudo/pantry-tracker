@@ -14,7 +14,7 @@ export default function Home() {
     <main style={{ padding: "2rem" }}>
       <div
         style={{
-          backgroundColor: "#ffffff",
+          backgroundColor: "#e7c9a9",
           color: "#000000",
           padding: "1rem 2rem",
           borderRadius: "16px",
